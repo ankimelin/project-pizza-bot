@@ -10,7 +10,7 @@ const orderName = prompt("Enter the name of the pizza you want to order")
 
 let orderQuantity = 0;
 
-if (orderName === (vegetarian), (hawaiian), (pepperoni)) {
+if (orderName === ((vegetarian), (hawaiian), (pepperoni))) {
     orderQuantity = prompt(`How many ${orderName} do you want?`);
 } else {
   prompt("Select a pizza from the menu");
