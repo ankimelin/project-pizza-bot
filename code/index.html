@@ -4,10 +4,30 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Pizzabot</title>
-    <script src="pizzabot.js"></script>
+    <title>pizza</title>
+    <link rel="stylesheet" href=./style.css>
+    <script src="./pizzabot2.js"></script>
   </head>
   <body>
-    <h1>This is your Pizza</h1>
+    <div class="container">
+
+      <p class="speech-bubble-left" id="welcome"></p>
+      <p class="speech-bubble-left" id="enterPizza"></p>
+
+      <form class="speech-bubble-right" onsubmit="validateOrderName(document.getElementById('pizza').value)">
+        <input type="text" id="pizza" name="pizza" autocomplete="off">
+        <input type="submit">
+      </form>
+
+      <p class="speech-bubble-left" id="response"><br></p>
+
+      <form class="speech-bubble-right" onsubmit="great(document.getElementById('orderQuantity').value)">
+        <input type="text" id="orderQuantity" name="quantity" autocomplete="off">
+        <input type="submit">
+      </form>
+
+      <p class="speech-bubble-left" id="great"><br></p>
+
+    </div>
   </body>
 </html>
