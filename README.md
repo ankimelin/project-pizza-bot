@@ -1,13 +1,11 @@
 # Pizza Bot
 
-Replace this readme with your own information about your project. 
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+A simple pizzabot using my first JavaScript.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+Started with the basic JavaScript variables, functions and conditionals, then moved on to HTML and CSS. Last most difficult part was to connect HTML and JavaScript code and make the pizzabot do what I want, this took a lot of trial and error, googling and some Stack Overflow questions. The JavaScript was rewritten to suit how I wanted the user to interact with the pizzabot. 
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+silly-varahamihira-b4a73f.netlify.app
