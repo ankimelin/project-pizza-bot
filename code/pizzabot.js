@@ -1,52 +1,52 @@
-const vegetarian = "Vegetarian Pizza"
-const hawaiian = "Hawaiian Pizza"
-const pepperoni = "Pepperoni Pizza"
+const vegetarian = "vegetarian pizza"
+const hawaiian = "hawaiian pizza"
+const pepperoni = "pepperoni pizza"
 
 const pizzaPrice = 80
 
-alert(`Hey, happy to see you! We have ${vegetarian}, ${hawaiian} and ${pepperoni} today on the menu!`)
+let orderName
+let orderQuantity
+let orderTotal
+let orderTime
 
-const orderName = prompt("Enter the name of the pizza you want to order")
-
-
-
-
-
-
-
-
-
-let orderQuantity = 0;
-
-
-if (orderName === ((vegetarian), (hawaiian), (pepperoni))) {
-    orderQuantity = prompt(`How many ${orderName} do you want?`);
-} else {
-  prompt("Select a pizza from the menu");
+window.onload = () => {
+    document.getElementById("welcome").innerHTML = `Hey! Happy to serve your pizza. On our menu we have ${vegetarian}, ${hawaiian} and ${pepperoni}.`
+    document.getElementById("enter-pizza").innerHTML = `Enter the name of the pizza you want to order today.`
 }
 
-const orderTotal = (orderQuantity*pizzaPrice)
-
-let orderTime = 0;
-if (orderQuantity >= 6) {
-    orderTime = 20; 
-} else if (orderQuantity >= 3) {
-    orderTime = 15;
-} else {
-    orderTime = 10;
+const validateOrderName = (pizza) => {
+    event.preventDefault()
+    orderName = pizza
+    document.getElementById("response").style.display = "block"
+    if (orderName === vegetarian || orderName === hawaiian || orderName === pepperoni) {
+        document.getElementById("response").innerHTML = `How many ${orderName} do you want?` 
+        document.getElementById("second-answer").style.display = "block"
+    } else {
+        document.getElementById("response").innerHTML = `No such pizza on the menu. Try again!`
+    }
 }
 
-alert(`Great, I'll start your ${orderName} right away, it will cost ${orderTotal} and take ${orderTime} minutes.`)
+const great = (quantity) => {
+    event.preventDefault()
+    orderQuantity = quantity
+    orderTotal = (orderQuantity * pizzaPrice)
+    calculateCookingTime(orderQuantity)
+    document.getElementById("great").style.display = "block"
+    document.getElementById("great").innerHTML = `Great, I'll get started on your ${orderName} right away, it will cost ${orderTotal} kr and take ${orderTime} minutes.`
+}
+
+const calculateCookingTime = (orderQuantity) => {
+    if (orderQuantity > 0 && orderQuantity <= 2) {
+        orderTime = 10
+    } else if (orderQuantity >= 3 && orderQuantity <= 5) {
+        orderTime = 15
+    } else if (orderQuantity >= 6) {
+        orderTime = 20
+    }
+}
 
 
-//const age = document.getElementById("age").value;
 
-//const age = document.getElementById("age").innerHTML = doubleAge;
 
-//event.preventDefault();
-
-//should we use event handlers in html <button onclick="choosePizza()"> or write in js document.getElementById("button").onclick = choosePizza; ? FIRST ONE AS FOR NOW
-
-//no prompts, use form
 
 
