@@ -13,10 +13,12 @@ window.onload = () => {
 const validateOrderName = (pizza) => {
     event.preventDefault();
     orderName = pizza
+    document.getElementById("response").style.display = "block"
     if (orderName === vegetarian || orderName === hawaiian || orderName === pepperoni) {
         document.getElementById("response").innerHTML = `How many ${orderName} do you want?` 
+        document.getElementById("second-answer").style.display = "block"
     } else {
-        return wrongOrder()
+        document.getElementById("response").innerHTML = `No such pizza on the menu. Try again!`
     }
 }
 
@@ -24,6 +26,7 @@ const great = (orderQuantity) => {
     event.preventDefault();
     const orderTotal = (orderQuantity * pizzaPrice)
     calculateCookingTime(orderQuantity)
+    document.getElementById("great").style.display = "block"
     document.getElementById("great").innerHTML = `Great, I'll get started on your ${orderName} right away, it will cost ${orderTotal} kr and take ${orderTime} minutes.`
 }
 
@@ -36,49 +39,6 @@ const calculateCookingTime = (orderQuantity) => {
         orderTime = 20
     }
 }
-
-const wrongOrder = () => {
-    alert(`No such pizza on the menu. Please choose one of the following pizzas: ${vegetarian}, ${hawaiian} or ${pepperoni}.`)
-    whatPizza()
-}
-
-// const welcome = () => {
-//     alert(`Hey! Happy to serve your pizza. On our menu we have ${vegetarian}, ${hawaiian} and ${pepperoni}.`)
-// }
-
-// welcome()
-
-// const whatPizza = () => {
-//     orderName = prompt(`Enter the name of the pizza you want to order today.`)
-//     validateOrderName(orderName)
-// }
-
-// const validateOrderName = (orderName) => {
-//     if (orderName === vegetarian || orderName === hawaiian || orderName === pepperoni) {
-//         calculateTotalCost()
-//         calculateCookingTime()
-//         return alert(`Great, I'll get started on your ${orderName} right away, it will cost ${orderTotal} kr and it will take ${orderTime} minutes.`)
-//     } else {
-//         return wrongOrder()
-//     }
-// }
-
-// let validateOrderName = () => {
-//     if (orderName === vegetarian || orderName === hawaiian || orderName === pepperoni) {
-//         calculateTotalCost()
-//         calculateCookingTime()
-//         return alert(`Great, I'll get started on your ${orderName} right away, it will cost ${orderTotal} kr and it will take ${orderTime} minutes.`)
-//     } else {
-//         return wrongOrder()
-//     }
-// }
-
-// const calculateTotalCost = () => {
-//     orderQuantity = prompt(`How many of ${orderName} do you want?`)
-//     orderTotal = (orderQuantity * pizzaPrice)
-// }
-
-
 
 
 
