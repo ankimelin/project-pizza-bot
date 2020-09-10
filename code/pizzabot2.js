@@ -1,17 +1,21 @@
-const vegetarian = "Vegetarian Pizza"
-const hawaiian = "Hawaiian Pizza"
-const pepperoni = "Pepperoni Pizza"
+const vegetarian = "vegetarian pizza"
+const hawaiian = "hawaiian pizza"
+const pepperoni = "pepperoni pizza"
 
 const pizzaPrice = 80
+
 let orderName
+let orderQuantity
+let orderTotal
+let orderTime
 
 window.onload = () => {
     document.getElementById("welcome").innerHTML = `Hey! Happy to serve your pizza. On our menu we have ${vegetarian}, ${hawaiian} and ${pepperoni}.`
-    document.getElementById("enterPizza").innerHTML = `Enter the name of the pizza you want to order today.`
+    document.getElementById("enter-pizza").innerHTML = `Enter the name of the pizza you want to order today.`
 }
 
 const validateOrderName = (pizza) => {
-    event.preventDefault();
+    event.preventDefault()
     orderName = pizza
     document.getElementById("response").style.display = "block"
     if (orderName === vegetarian || orderName === hawaiian || orderName === pepperoni) {
@@ -22,9 +26,10 @@ const validateOrderName = (pizza) => {
     }
 }
 
-const great = (orderQuantity) => {
-    event.preventDefault();
-    const orderTotal = (orderQuantity * pizzaPrice)
+const great = (quantity) => {
+    event.preventDefault()
+    orderQuantity = quantity
+    orderTotal = (orderQuantity * pizzaPrice)
     calculateCookingTime(orderQuantity)
     document.getElementById("great").style.display = "block"
     document.getElementById("great").innerHTML = `Great, I'll get started on your ${orderName} right away, it will cost ${orderTotal} kr and take ${orderTime} minutes.`

@@ -12,21 +12,21 @@
     <div class="container">
 
       <p class="speech-bubble-left" id="welcome"></p>
-      <p class="speech-bubble-left" id="enterPizza"></p>
+      <p class="speech-bubble-left" id="enter-pizza"></p>
 
       <form class="speech-bubble-right" id="first-answer" onsubmit="validateOrderName(document.getElementById('pizza').value)">
-        <input type="text" id="pizza" name="pizza" autocomplete="off">
+        <input type="text" id="pizza" autocomplete="off">
         <input type="submit">
       </form>
 
-      <p class="speech-bubble-left" id="response"><br></p>
+      <p class="speech-bubble-left" id="response"></p>
 
-      <form class="speech-bubble-right" id="second-answer" onsubmit="great(document.getElementById('orderQuantity').value)">
-        <input type="text" id="orderQuantity" name="quantity" autocomplete="off">
+      <form class="speech-bubble-right" id="second-answer" onsubmit="great(document.getElementById('quantity').value)">
+        <input type="text" id="quantity" autocomplete="off">
         <input type="submit">
       </form>
 
-      <p class="speech-bubble-left" id="great"><br></p>
+      <p class="speech-bubble-left" id="great"></p>
 
     </div>
   </body>
