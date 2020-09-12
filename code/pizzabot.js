@@ -1,6 +1,6 @@
-const vegetarian = "vegetarian pizza"
-const hawaiian = "hawaiian pizza"
-const pepperoni = "pepperoni pizza"
+const vegetarian = "Vegetarian"
+const hawaiian = "Hawaiian"
+const pepperoni = "Pepperoni"
 
 const pizzaPrice = 80
 
@@ -10,7 +10,7 @@ let orderTotal
 let orderTime
 
 window.onload = () => {
-    document.getElementById("welcome").innerHTML = `Hey! Happy to serve your pizza. On our menu we have ${vegetarian}, ${hawaiian} and ${pepperoni}.`
+    document.getElementById("welcome").innerHTML = `Hey! Happy to serve your pizza. On our menu we have ${vegetarian}, ${hawaiian} and ${pepperoni} pizza.`
     document.getElementById("enter-pizza").innerHTML = `Enter the name of the pizza you want to order today.`
 }
 
@@ -19,7 +19,7 @@ const validateOrderName = (pizza) => {
     orderName = pizza
     document.getElementById("response").style.display = "block"
     if (orderName === vegetarian || orderName === hawaiian || orderName === pepperoni) {
-        document.getElementById("response").innerHTML = `How many ${orderName} do you want?` 
+        document.getElementById("response").innerHTML = `How many ${orderName} pizza do you want?` 
         document.getElementById("second-answer").style.display = "block"
     } else {
         document.getElementById("response").innerHTML = `No such pizza on the menu. Try again!`
@@ -32,7 +32,7 @@ const great = (quantity) => {
     orderTotal = (orderQuantity * pizzaPrice)
     calculateCookingTime(orderQuantity)
     document.getElementById("great").style.display = "block"
-    document.getElementById("great").innerHTML = `Great, I'll get started on your ${orderName} right away, it will cost ${orderTotal} kr and take ${orderTime} minutes.`
+    document.getElementById("great").innerHTML = `Great, I'll get started on your ${orderName} pizza right away, it will cost ${orderTotal} kr and take ${orderTime} minutes.`
 }
 
 const calculateCookingTime = (orderQuantity) => {
