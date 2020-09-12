@@ -4,31 +4,29 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>pizza</title>
+    <title>Pizza</title>
     <link rel="stylesheet" href=./style.css>
     <script src="./pizzabot.js"></script>
   </head>
   <body>
 
-    <div class="container">
-
       <p class="speech-bubble-left" id="welcome"></p>
+
       <p class="speech-bubble-left" id="enter-pizza"></p>
 
-      <form class="speech-bubble-right" id="first-answer" onsubmit="validateOrderName(pizza.value)">
-        <input type="text" id="pizza" autocomplete="off">
+      <form class="speech-bubble-right" id="first-answer" onsubmit="validateOrderName(name.value)">
+        <input type="text" id="name" autocomplete="off">
         <input type="submit">
       </form>
 
       <p class="speech-bubble-left" id="response"></p>
 
-      <form class="speech-bubble-right" id="second-answer" onsubmit="great(quantity.value)">
+      <form class="speech-bubble-right" id="second-answer" onsubmit="confirmOrder(quantity.value)">
         <input type="text" id="quantity" autocomplete="off">
         <input type="submit">
       </form>
 
       <p class="speech-bubble-left" id="great"></p>
 
-    </div>
   </body>
 </html>

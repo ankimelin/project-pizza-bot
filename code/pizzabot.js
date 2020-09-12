@@ -14,9 +14,9 @@ window.onload = () => {
     document.getElementById("enter-pizza").innerHTML = `Enter the name of the pizza you want to order today.`
 }
 
-const validateOrderName = (pizza) => {
+const validateOrderName = (name) => {
     event.preventDefault()
-    orderName = pizza
+    orderName = name
     document.getElementById("response").style.display = "block"
     if (orderName === vegetarian || orderName === hawaiian || orderName === pepperoni) {
         document.getElementById("response").innerHTML = `How many ${orderName} pizza do you want?` 
@@ -26,7 +26,7 @@ const validateOrderName = (pizza) => {
     }
 }
 
-const great = (quantity) => {
+const confirmOrder = (quantity) => {
     event.preventDefault()
     orderQuantity = quantity
     orderTotal = (orderQuantity * pizzaPrice)
