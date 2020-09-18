@@ -14,28 +14,28 @@ window.onload = () => {
     document.getElementById("enter-pizza").innerHTML = `Enter the name of the pizza you want to order today.`
 }
 
-const validateOrderName = (name) => {
+const validateOrderName = name => {
     event.preventDefault()
     orderName = name
     document.getElementById("response").style.display = "block"
     if (orderName === vegetarian || orderName === hawaiian || orderName === pepperoni) {
-        document.getElementById("response").innerHTML = `How many ${orderName} pizza do you want?` 
+        document.getElementById("response").innerHTML = `How many ${orderName} pizza do you want?`
         document.getElementById("second-answer").style.display = "block"
     } else {
         document.getElementById("response").innerHTML = `No such pizza on the menu. Try again!`
     }
 }
 
-const confirmOrder = (quantity) => {
+const confirmOrder = quantity => {
     event.preventDefault()
     orderQuantity = quantity
-    orderTotal = (orderQuantity * pizzaPrice)
+    orderTotal = orderQuantity * pizzaPrice
     calculateCookingTime(orderQuantity)
     document.getElementById("great").style.display = "block"
     document.getElementById("great").innerHTML = `Great, I'll get started on your ${orderName} pizza right away, it will cost ${orderTotal} kr and take ${orderTime} minutes.`
 }
 
-const calculateCookingTime = (orderQuantity) => {
+const calculateCookingTime = orderQuantity => {
     if (orderQuantity > 0 && orderQuantity <= 2) {
         orderTime = 10
     } else if (orderQuantity >= 3 && orderQuantity <= 5) {
