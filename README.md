@@ -9,4 +9,3 @@ Started with the basic JavaScript variables, functions and conditionals, then mo
 ## View it live
 
 silly-varahamihira-b4a73f.netlify.app
-
